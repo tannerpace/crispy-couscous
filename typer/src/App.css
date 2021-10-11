@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=VT323&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Monofett&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Monofett&family=Open+Sans:wght@400;600&family=Press+Start+2P&family=Roboto+Slab&family=Rubik+Beastly&display=swap");
 :-webkit-scrollbar {
@@ -34,7 +34,22 @@
     rgba(148, 187, 233, 1) 53% rgba(238, 174, 202, 1) 70%
   );
 }
-
+/* html {
+  background: #5dea17;
+  background: -moz-linear-gradient(top, #5dea17 0%, #fff83a 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #5dea17),
+    color-stop(100%, #fff83a)
+  );
+  background: -webkit-linear-gradient(top, #5dea17 0%, #fff83a 100%);
+  background: -o-linear-gradient(top, #5dea17 0%, #fff83a 100%);
+  background: -ms-linear-gradient(top, #5dea17 0%, #fff83a 100%);
+  background: linear-gradient(to bottom, #5dea17 0%, #fff83a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5dea17', endColorstr='#fff83a',GradientType=0 );
+} */
 html,
 body {
   background: radial-gradient(
@@ -46,17 +61,14 @@ body {
   margin: 0;
   padding: 0;
   padding-top: 10px;
-  font-family: "Press Start 2P", cursive;
+  /* font-family: "Press Start 2P", cursive; */
   text-align: center;
   height: 100vh;
-}
-
-body {
   font-weight: 400;
 }
 
 button {
-  font-family: "Press Start 2P", cursive;
+  /* font-family: "Press Start 2P", cursive; */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -69,23 +81,23 @@ button {
 
 h1 {
   margin-top: 1px;
-  font-family: "Monofett", cursive;
+  font-family: "Fira Code", monospace;
   font-size: 3rem;
   text-align: center;
   background: -webkit-linear-gradient(
-    rgb(24, 126, 167),
-    rgba(117, 12, 12, 0.61)
+    rgba(103, 62, 62, 0.61) 50%,
+    rgba(222, 231, 235, 0.44)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 h2 {
-  font-family: "Monofett", cursive;
-  font-size: 1.6rem;
+  font-family: "Fira Code", monospace;
+  font-size: 2.6rem;
   text-align: center;
   background: -webkit-linear-gradient(
-    rgb(24, 126, 167),
+    rgb(233, 240, 242),
     rgba(117, 12, 12, 0.61)
   );
   -webkit-background-clip: text;
@@ -110,9 +122,9 @@ textarea {
 }
 
 .reset {
-  font-family: "Press Start 2P", cursive;
-  background-color: rgba(117, 12, 12, 0.61);
-  color: rgb(24, 126, 167);
+  /* font-family: "Press Start 2P", cursive; */
+  background-color: rgba(247, 0, 0, 0.61);
+  color: rgb(0, 255, 55);
 }
 .placeHolder {
   color: transparent;
@@ -120,26 +132,246 @@ textarea {
 }
 
 .stopButton {
-  font-family: "Rubik Beastly", cursive;
-  background-color: rgba(120, 28, 133, 0.335);
+  /* font-family: "Rubik Beastly", cursive; */
+  background-color: rgba(133, 28, 28, 0.335);
 }
 
 .startButton {
-  font-family: "Press Start 2P", cursive;
+  /* font-family: "Press Start 2P", cursive; */
   background-color: rgba(120, 28, 133, 0.335);
   margin-bottom: 33px;
   margin-top: 30px;
 }
 
 .toggle {
-  font-family: "Press Start 2P", cursive;
-  background: -webkit-linear-gradient(
-    rgb(24, 126, 167),
-    rgba(117, 12, 12, 0.61)
-  );
-  color: rgb(255, 255, 255);
+  height: "120px";
+  display: inline-block;
+  background-color: #ffed66;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ff5e5b;
+  box-shadow: 0 3px 0 #ff5e5b;
+  cursor: pointer;
+  transition: all 100ms linear;
 }
 .typeWrapper {
   width: 75%;
   margin: auto;
+}
+.buttonWrapper {
+  display: flexbox;
+  flex-direction: column;
+}
+
+.stop-sign,
+.stop-sign * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+.stop-sign div {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  font-family: "Roboto", "Open Sans Condensed", "Open Sans", "Source Sans Pro",
+    Roboto, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    "Myriad Pro", "Segoe UI", Myriad, Helvetica, "Lucida Grande",
+    "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva,
+    Arial, sans-serif;
+}
+/* Background */
+.stop-sign div,
+.stop-sign div > div > div,
+.stop-sign div > div > div > div > div {
+  background: transparent;
+}
+.stop-sign div > div,
+.stop-sign div > div > div > div > div > div {
+  background: red;
+}
+.stop-sign div > div > div > div {
+  background: white;
+}
+/* Rotation and Sizing */
+.stop-sign div > div,
+.stop-sign div > div > div > div,
+.stop-sign div > div > div > div > div > div {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0;
+}
+.stop-sign div > div > div {
+  width: 80px;
+  height: 80px;
+  top: 10px;
+}
+.stop-sign div > div > div > div > div {
+  width: 60px;
+  height: 60px;
+  top: 10px;
+}
+.stop-sign div span {
+  position: absolute;
+  font-size: 64pt;
+  bottom: 32%;
+  right: 10%;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+/* Colors */
+/* Fonts */
+/* Background images */
+/* General */
+body {
+  background-color: #ffffea;
+  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+  font-family: "Abel", sans-serif;
+  color: #ff5e5b;
+}
+/* Main page */
+
+p.desc {
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #ffed66;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ff5e5b;
+  box-shadow: 0 3px 0 #ff5e5b;
+  cursor: pointer;
+  transition: all 100ms linear;
+}
+.btn:hover {
+  -moz-transform: translateY(-4px);
+  -o-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
+  box-shadow: 0 7px 0 #ff5e5b;
+}
+.btn:focus {
+  outline: 0;
+}
+/* Github ribbon */
+#github {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+/* Helpers */
+.align-center {
+  text-align: center;
+}
+.hide {
+  display: none !important;
+}
+.cursor-default {
+  cursor: default !important;
+}
+/* Reponsive Rules */
+@media screen and (max-width: 1200px) {
+  .flip-container,
+  .front,
+  .back {
+    width: 140px;
+    height: 180px;
+  }
+  .timer {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffea;
+  }
+}
+@media screen and (max-width: 992px) {
+  .flip-container,
+  .front,
+  .back {
+    width: 100px;
+    height: 140px;
+  }
+  .front label {
+    display: inline-block;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  .cards-container {
+    margin: 40px 10px;
+  }
+  .timer {
+    top: 10px;
+    left: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .flip-container,
+  .front,
+  .back {
+    width: 80px;
+    height: 120px;
+  }
+}
+/* Animations */
+@keyframes wobble {
+  from {
+    transform: none;
+  }
+  15% {
+    transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    transform: none;
+  }
+}
+.wobble {
+  animation: wobble 600ms ease-in-out;
+}
+.mode {
+  margin-bottom: -10px;
 }

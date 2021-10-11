@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react"
 import SimpleTimer from "./components/Timer/SimpleTimer"
 import MyTypeTest from "./components/MyTypeTest"
 
+
 function App() {
   const [wordCount, setWordCount] = useState("0")
   const [value, setValue] = useState("")
@@ -18,6 +19,7 @@ function App() {
   }
 
   const handleStart = () => {
+    handleReset()
     setIsStarted((isStarted) => !isStarted)
     inputRef.current.disabled = false
     inputRef.current.focus()
@@ -42,15 +44,29 @@ function App() {
     setSeconds(60)
     setWordCount(0)
     eraseText()
+
   }
 
-  // const setDisabled = () => {
-  //   if (seconds < 1) {
-  //     return true
-  //   } else {
-  //     return false
-  //   }
-  // }
+
+
+  const StopSign = () => {
+    return (<figure class="stop-sign animated rubberBand">
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <span>STOP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </figure>)
+  }
+
 
   const ResetButton = () => {
     return (
@@ -61,28 +77,17 @@ function App() {
   }
 
   const StartButton = () => {
-    return (
-      <button
-        className="startButton"
-        onClick={handleStart}
-        // disabled={setDisabled}
-      >
-        Start
-      </button>
-    )
-  }
-  const StopButton = () => {
-    // setSeconds(60)
-    return (
-      <button className="stopButton" onClick={handleStop}>
-        Stop
-      </button>
+    return (<>
+      <div class="align-center" onClick={handleStart}>
+        <button class="btn" id="btn-start">
+          {isStarted ? "Reset" : "Start"}
+        </button>
+        <div class="flip-container hide"></div></div> </>
     )
   }
 
-  const PlaceHoldersButton = () => {
-    return <button className="placeHolder">Im a placeholder</button>
-  }
+
+
 
   const hint = !isStarted ? "Click the START button!" : "Start Typing Now!"
 
@@ -92,7 +97,7 @@ function App() {
     }
     return (
       <button className="toggle" onClick={handleToggle}>
-        {normal ? "Normal" : "Code Mode"}
+        {normal ? " Eng. " : "Code"}
       </button>
     )
   }
@@ -100,8 +105,8 @@ function App() {
   return (
     <div className="App">
       {!isStarted ? <h1>Typing Test</h1> : <h1>Start Typing!</h1>}
-      <MyTypeTest isStarted={isStarted} normal={normal} />
-      {isStarted ? <StopButton /> : <StartButton />}
+      <MyTypeTest className="typeTest" isStarted={isStarted} normal={normal} />
+
 
       <textarea
         className="inputBox"
@@ -122,13 +127,13 @@ function App() {
       ) : (
         <>
           {" "}
-          <h2>Word Count : {wordCount}</h2>
+          <h2 className="mode">Word Count :{wordCount}</h2>
         </>
       )}
+      <StartButton />
+      <h2>Mode</h2><Toggle />
 
-      <PlaceHoldersButton />
-      {!isStarted ? <ResetButton /> : <>{/* <Badge /> */}</>}
-      <Toggle />
+      {/* <StopSign onClick={handleStop} /> */}
     </div>
   )
 }
