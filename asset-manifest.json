@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/crispy-couscous/static/css/main.af774752.chunk.css",
-    "main.js": "/crispy-couscous/static/js/main.5c33cb46.chunk.js",
-    "main.js.map": "/crispy-couscous/static/js/main.5c33cb46.chunk.js.map",
+    "main.css": "/crispy-couscous/static/css/main.e284f9aa.chunk.css",
+    "main.js": "/crispy-couscous/static/js/main.3d3a2c07.chunk.js",
+    "main.js.map": "/crispy-couscous/static/js/main.3d3a2c07.chunk.js.map",
     "runtime-main.js": "/crispy-couscous/static/js/runtime-main.3197231f.js",
     "runtime-main.js.map": "/crispy-couscous/static/js/runtime-main.3197231f.js.map",
     "static/js/2.ed689682.chunk.js": "/crispy-couscous/static/js/2.ed689682.chunk.js",
     "static/js/2.ed689682.chunk.js.map": "/crispy-couscous/static/js/2.ed689682.chunk.js.map",
     "index.html": "/crispy-couscous/index.html",
-    "static/css/main.af774752.chunk.css.map": "/crispy-couscous/static/css/main.af774752.chunk.css.map",
+    "static/css/main.e284f9aa.chunk.css.map": "/crispy-couscous/static/css/main.e284f9aa.chunk.css.map",
     "static/js/2.ed689682.chunk.js.LICENSE.txt": "/crispy-couscous/static/js/2.ed689682.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3197231f.js",
     "static/js/2.ed689682.chunk.js",
-    "static/css/main.af774752.chunk.css",
-    "static/js/main.5c33cb46.chunk.js"
+    "static/css/main.e284f9aa.chunk.css",
+    "static/js/main.3d3a2c07.chunk.js"
   ]
 }
