@@ -1,4 +1,4 @@
-drop schema if exists mytype;
+drop schema if exists mytype
 CREATE SCHEMA `mytype` 
 
 
@@ -6,6 +6,7 @@ CREATE TABLE `mytype`.`users` (
     id int unique not null auto_increment,
     userName varchar(25) unique not null,
     password varchar(255) not null,
+    new_user int DEFAULT (1),
     dateJoined Datetime not null DEFAULT (current_date()),
 
    
